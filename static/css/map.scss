@@ -1,0 +1,173 @@
+@import "fonts";
+
+#map {
+  min-heigh: 943px;
+  background: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  .services_head {
+    margin-top: 61px;
+    margin-bottom: 64px;
+    margin-left: 25%;
+  }
+
+  .container_map {
+    display: flex;
+    justify-content: center;
+    //margin-bottom: 140px;
+
+  }
+
+  //#map_content{
+  //  display: flex;
+  //  justify-content: center;
+  //}
+
+  .info {
+    margin-left: 23%;
+    //background: black;
+    //opacity: 0.6;
+    //background: rgba(0, 0, 0, 0.6);
+
+    .addr_list {
+      @include font(28px);
+      font-weight: bold;
+
+    }
+
+    div {
+
+      margin-top: 52px;
+      margin-left: 50px;
+      margin-bottom: 40px;
+      width: auto;
+      height: auto;
+      @include font(28px);
+      //color: white;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.5px;
+    }
+
+    ul {
+      margin-left: 0px;
+      list-style-type: none;
+      @include font(24px);
+      //color: white;
+      font-weight: normal;
+      line-height: 33px;
+      letter-spacing: 0.5px;
+    }
+
+    li {
+      margin-top: 4px;
+
+      span {
+        font-weight: bold;
+      }
+
+      div#list_socnet {
+        margin: 0px;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+
+        img.msg {
+          height: 64px;
+          width: 64px;
+          margin-right: 16px;
+
+        }
+
+
+        div {
+          margin-right: 32px;
+          margin-left: 8px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 30px;
+          line-height: 35px;
+          text-align: center;
+          letter-spacing: 0.5px;
+        }
+
+      }
+    }
+
+    img {
+      opacity: 1;
+    }
+
+  }
+
+  .central_map {
+
+    width: 1300px;
+    height: 520px;
+    justify-self: center;
+
+    background-image: url("../img/contactsmap.png");
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    div {
+      height: 50%;
+      width: 50%;
+    }
+
+
+    .info:nth-child(2) {
+      ul {
+        margin: 25px;
+        list-style-type: none;
+        @include font(18px);
+        color: white;
+        font-weight: normal;
+        line-height: 21px;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        height: 40px;
+        width: 40px;
+        margin-right: 16px;
+      }
+
+      li {
+        margin-top: 14px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+
+      span {
+        margin-left: 16px;
+        font-weight: bold;
+
+      }
+
+      .msg {
+        height: 36px;
+        width: 36px;
+        margin-left: 24px;
+        margin-top: 12px;
+      }
+
+      .msg_list {
+        margin-left: 30px;
+      }
+
+    }
+
+  }
+
+}

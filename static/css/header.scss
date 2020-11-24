@@ -1,0 +1,135 @@
+@import "fonts";
+
+header {
+  border: 0px;
+  margin: 0px;
+  padding-top: 2px;
+  height: 900px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  //background: url("../img/back_header.jpeg");
+  //background-size: cover;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+
+  a {
+    text-decoration: none;
+    @include font(14px);
+    text-transform: uppercase;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+
+  img#logo_img {
+    height: 49px;
+    width: 43px;
+    //margin-left: 12%;
+
+  }
+
+  div.logo_div {
+    margin-left: 22.65px;
+    display: inline;
+    @include font(18px);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+
+    #logo_disc {
+      margin-top: -14px;
+      @include font(9px);
+    }
+
+  }
+
+  ul.nav_line {
+    list-style-type: none;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    margin-top: 16px;
+  }
+
+  ul li {
+    margin-right: 36px;
+    display: inline;
+    text-transform: uppercase;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+
+  }
+
+
+  .header_line {
+
+    @include font(14px);
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  div.logo_div.phone {
+
+    //margin-left: 12%;
+    //margin-right: 6%;
+
+  }
+
+  div.header_body {
+    margin-bottom: 0px;
+    margin-top: 3.5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    p.big_desc {
+      margin-right: 5%;
+      margin-left: 5%;
+      margin-top: 16px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-left: 5%;
+      margin-right: 15%;
+      margin-bottom: 0px;
+      font-size: 64px;
+      line-height: 75px;
+
+    }
+
+    button {
+      margin-left: 5%;
+      margin-right: auto;
+    }
+
+
+    img {
+      margin-left: 10%;
+
+      height: 711px;
+    }
+
+    .button_bloc {
+      margin-left: 5%;
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+
+
+      margin-bottom: 300px;
+    }
+  }
+}
+
+

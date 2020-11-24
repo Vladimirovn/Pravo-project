@@ -1,0 +1,100 @@
+@import "fonts";
+
+#footer_ {
+  min-heigh: 943px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+
+  .services_head {
+    margin-top: 61px;
+    margin-bottom: 64px;
+    margin-left: 25%;
+  }
+
+  .container_map {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 140px;
+  }
+
+  .desc {
+    margin-left: 25%;
+    @include font(22px);
+    margin-bottom: 45px;
+    width: 50%;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+  }
+
+  button {
+    margin-bottom: 140px;
+  }
+
+}
+
+footer {
+
+  background: #333333;
+  height: 122px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+
+  a {
+    @include font(14px);
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    @include font(14px);
+    color: white;
+  }
+
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+
+  }
+
+  .rights {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+    letter-spacing: 0.5px;
+  }
+
+  .phone {
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    letter-spacing: 0.5px;
+  }
+
+  .duty {
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 11px;
+    margin-top: -20px;
+    /* identical to box height */
+    text-align: right;
+    letter-spacing: 0.5px;
+  }
+
+
+}

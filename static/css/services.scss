@@ -1,0 +1,130 @@
+@import "fonts";
+
+div#services_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1400px;
+  background: #FFFFFF;
+  margin-top: 0px;
+  border: 0;
+  padding: 0px;
+
+  .service_bloc_container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  div.block_body {
+    padding-top: 14px;
+    display: block;
+    @include font(20px);
+    line-height: 23px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .heading_body {
+
+    @include font(12px);
+    font-weight: 500;
+    line-height: 14px;
+    margin-top: 24px;
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+
+  .services_head {
+    margin-top: 61px;
+    margin-bottom: 64px;
+    //align-self: start;
+    margin-right: 25%;
+  }
+
+
+  div.big_service_bloc {
+
+
+    margin: 20px 10px 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.25);
+    background: #FFFFFF;
+    height: 310px;
+    width: 310px;
+
+  }
+
+  div.small_service_bloc {
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.25);
+    background: #FFFFFF;
+    margin: 10px;
+    height: 100px;
+    width: 310px;
+    //padding-left: 35px;
+    //padding-right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bloc_heading {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+
+  .heading_len {
+    max-width: 540px;
+  }
+
+  .service_body {
+    width: 100%;
+    display: flex;
+
+    //align-self: end;
+    //flex-direction: initial;
+    justify-content: space-between;
+
+    .button_bloc {
+      //position: absolute;
+      margin-left: 25%;
+      //align-self: start;
+      //h1{
+      //  margin-left: 5%;
+      //
+      //}
+      //p{
+      //  margin-left: 5%;
+      //}
+      button {
+        margin-left: 0%;
+        margin-right: 0%;
+      }
+
+    }
+
+
+  }
+
+  img {
+    //position: absolute;
+    margin-right: 0px;
+    margin-top: 63px;
+    //width: 30%;
+    height: 477px;
+    //align-self: end;
+    //justify-self: end;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+    //  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+    //from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
+
+}
+

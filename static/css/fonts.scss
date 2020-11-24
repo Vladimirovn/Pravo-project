@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Roboto";
+  src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+}
+
+@mixin font($size) {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: $size;
+  color: #000000;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.heading {
+  display: block;
+  line-height: 35px;
+  @include font(30px);
+}
+
+h1 {
+  @include font(44px);
+  margin-top: 155px;
+  //margin-left: 25%;
+  //margin-right: 22%;
+  line-height: 52px;
+  font-weight: 500;
+
+}
+
+
+p.big_desc {
+  @include font(18px);
+  line-height: 21px;
+  //margin-left: 25%;
+  //margin-right: 22%;
+  font-weight: 300;
+
+}
+
+
+.body_card {
+  width: 65%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+.name_card {
+  margin-top: 5%;
+  margin-left: 60%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
+
+label {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+
+  color: #686868;
+}

@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    {% if is_answer %}
+        <div class="sending_message">
+            {% if result %}
+                <div class="answer_text">{{ result_msg }}</div>
+
+            {% endif %}
+        </div>
+    {% endif %}
+    <header>
+        <div class="header_line">
+            <img id="logo_img" src={% static "img/union.png" %}>
+
+            <div class="logo_div">
+                <p>ПРАВО НА АДВОКАТА</p>
+                <p id="logo_disc">ЮРИДИЧЕСКАЯ ПОМОЩЬ</p>
+            </div>
+            <ul class="nav_line">
+                <li><a href="#header_line">ГЛАВНАЯ</a></li>
+                <li><a href="#services_container">СФЕРЫ КОМПЕТЕНЦИИ</a></li>
+                <li><a href="#reviews">ОТЗЫВЫ</a></li>
+                <li><a href="#map">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="logo_div phone">
+                <p>{{ config.PHONE }}</p>
+                <p id="logo_disc">ДЕЖУРНЫЙ ЮРИСТ</p>
+            </div>
+        </div>
+        <div class="header_body">
+            <img src={% static "img/femida.png" %}/>
+
+            <div class="button_bloc">
+
+                <h1>
+                    Круглосуточная
+                    юридическая помощь
+                </h1>
+
+                <p class="big_desc">
+                    Решаем спорные вопросы во всех сферах права
+                </p>
+                <button class="green link">
+                    ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
+
+                </button>
+            </div>
+        </div>
+
+    </header>
+    <div id="services_container">
+        <div class="heading services_head">
+            СФЕРЫ КОМПЕТЕНЦИЙ
+        </div>
+
+        <div class="service_bloc_container">
+            <div class="big_service_bloc">
+                <div class="heading bloc_heading">ТРУДОВЫЕ СПОРЫ</div>
+                <div class="heading_body">
+                    Непредоставление отпуска и незаконное увольнение. Задержка заработной платы.
+                </div>
+            </div>
+
+            <div class="big_service_bloc">
+                <div class="heading bloc_heading">СЕМЕЙНЫЕ СПОРЫ</div>
+                <div class="heading_body">
+                    Развод и раздел имущества. Алименты. Определение места жительства и порядка общения.
+                </div>
+            </div>
+            <div class="big_service_bloc">
+                <div class="heading bloc_heading">СТРАХОВЫЕ СПОРЫ</div>
+                <div class="heading_body">
+                    Составление запросов и претензий в страховые компании. Обжалование отказов.
+                </div>
+            </div>
+            <div class="big_service_bloc">
+                <div class="heading bloc_heading">ВЗЫСКАНИЕ ЗАДОЛЖЕННОСТИ
+                </div>
+                <div class="heading_body">
+                    Взыскание задолженности в рамках исполнительного производства. Просуженная задолженность.
+                </div>
+            </div>
+        </div>
+
+        <div class="service_bloc_container">
+            <div class="small_service_bloc">
+                <div class="block_body">УГОЛОВНОЕ ПРЕСЛЕДОВАНИЕ</div>
+            </div>
+            <div class="small_service_bloc">
+                <div class="block_body">ЗАЩИТА ПРАВ ПОТРЕБИТЕЛЕЙ</div>
+            </div>
+
+            <div class="small_service_bloc">
+                <div class="block_body">ГРАЖДАНСКИЕ ДЕЛА</div>
+            </div>
+
+            <div class="small_service_bloc">
+                <div class="block_body">АДМИНИСТРАТИВНЫЕ СПОРЫ</div>
+            </div>
+
+        </div>
+
+        <div class="service_bloc_container">
+            <div class="small_service_bloc">
+                <div class="block_body">МЕДИЦИНСКОЕ ПРАВО</div>
+            </div>
+            <div class="small_service_bloc">
+                <div class="block_body">АРБИТРАЖНЫЕ СПОРЫ</div>
+            </div>
+
+            <div class="small_service_bloc">
+                <div class="block_body">МЕЖДУНАРОДНОЕ ПРАВО</div>
+            </div>
+
+            <div class="small_service_bloc">
+                <div class="block_body">БУХГАЛТЕРСКИЙ И КАДРОВЫЙ АУДИТ
+                </div>
+            </div>
+
+        </div>
+
+        <div class="service_body">
+            <div class="button_bloc">
+                <h1 class="heading_len">
+                    Юридическая помощь во всех отраслях права
+                </h1>
+                <p class="big_desc heading_len">
+                    Подготовим документ любой сложности и сопроводим Ваше дело в инстанциях "под ключ”.
+                </p>
+
+                <button class="green link">
+                    ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
+
+                </button>
+            </div>
+            <img src={% static "img/image.png" %}/>
+
+        </div>
+
+
+    </div>
+    <div id="reviews">
+        <div class="heading services_head">
+            ОТЗЫВЫ
+        </div>
+        <div id="carousel">
+
+            <div class="arrow back"><img src={% static "img/arrow.png" %}></div>
+            {% for review in reviews %}
+                <div
+                        {% if review.order == 0 %}
+                            class="card first show"
+                        {% elif review.order == 1 %}
+                            class="card second"
+                        {% elif review.order == 2 %}
+                            class="card third"
+                        {% elif review.order == 3 %}
+                            class="card forth"
+                        {% endif %}
+                >
+
+                    <div class="card_pic">
+                        <div><img class="person_icon" src={% static "img/user_icon.png" %}></div>
+                        <div>
+                            <img class="person_stars" src={% static "img/stars.png" %}></div>
+                    </div>
+                    <div class="body_card">
+                        {{ review.body }}
+                    </div>
+                    <div class="name_card">
+                        {{ review.title }}
+                    </div>
+
+
+                </div>
+            {% endfor %}
+            <div class="arrow next"><img src={% static "img/arrow.png" %}></div>
+        </div>
+
+        <div id="item_indicator">
+            <div class="item first_item"></div>
+            <div class="item second_item"></div>
+            <div class="item third_item"></div>
+            <div class="item forth_item"></div>
+        </div>
+
+
+    </div>
+    <div id="mail_form">
+        <div class="heading services_head">
+            БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
+        </div>
+
+        <div id="desc">Если у Вас остался вопрос или Вы хотите сотрудничать с нами, Вы можете оставить заявку на
+            бесплатную
+            юридическую консультацию или связаться с нами любым удобным для Вас способом. Мы будем рады помочь!
+        </div>
+
+        <form action="/send-mail/" method="post">
+            <div class="form-box">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="field_wrapper">
+                        {{ field.errors }}
+                        {{ field.label_tag }} {{ field }}
+                        {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <a href={% url "rights" %}>Положение на обработку персональных данных</a>
+                <button type="submit" value="Submit" class="green">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</button>
+
+            </div>
+
+        </form>
+        <div></div>
+    </div>
+    <div id="map">
+        <div class="heading services_head">
+            КОНТАКТЫ
+        </div>
+        <div class="container_map">
+            <div class="central_map">
+
+
+            </div>
+        </div>
+        <div id="map_content">
+            <div class="info">
+
+                <div class="addr_list">Представительства компании:</div>
+                <ul>
+                    <li>- Москва, Мажоров пер., д. 14 (ст. м. Семеновская)</li>
+                    <li>- Московская область, Люберецкий район, поселок Томилино</li>
+                    <li>- Московская область, Люберецкий район, поселок Малаховка</li>
+                    <li>- Москва, Таганская улица, 1 с. 1 (ст. м. Таганская)</li>
+                    <li>- Москва, Пресненская наб., д. 6, стр. 2 (ст. м. Деловой центр)</li>
+                </ul>
+            </div>
+            <div class="info">
+
+                <ul>
+                    <li>Телефон:&nbsp;&nbsp; <span>{{ config.PHONE }}</span></li>
+                    <li>Почта:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>{{ config.EMAIL }}</span></li>
+
+                    {#                    <li><img src={% static "img/instagram.png" %}/> {{ config.INSTA }}</li>#}
+                    {#                    <li><img src={% static "img/vk.png" %}/> {{ config.INSTA }}</li>#}
+                    {#                    <li><img src={% static "img/facebook.png" %}/> </li>#}
+                    <li class="msg_list">
+                        <div id="list_socnet">
+                            <img class="msg" src={% static "img/instagram.png" %}/>
+                            <img class="msg" src={% static "img/vk.png" %}/>
+                            <img class="msg" src={% static "img/facebook.png" %}/>
+                            <div>{{ config.INSTA }}</div>
+
+                            <img class="msg" src={% static "img/whatsapp.png" %}>
+                            <img class="msg" src={% static "img/telegram.png" %}>
+                            <img class="msg" src={% static "img/viber.png" %}>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div></div>
+
+
+        </div>
+
+        <div id="footer_">
+            <div class="heading services_head">
+                Уважаемые друзья!
+            </div>
+
+            <div class="desc">Мы рады сообщить, что для самых внимательных пользователей нашего сайта, в настоящий
+                момент,
+                действует акция на скидку в 10% по купону: УСПЕХ10.
+            </div>
+            <br>
+            <div class="desc"> Сообщите специалисту, что Вы внимательно ознакомились с
+                нашим сайтом и имеете купон на скидку!
+            </div>
+
+            <button class="green link">
+                ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
+
+            </button>
+
+        </div>
+        <footer>
+            <div>
+                <a href={% url "rights" %}>Положение на обработку персональных данных</a>
+                <p class="rights">© 2019 «ПРАВО НА АДВОКАТА». Все права защищены. Не является публичной офертой.</p>
+
+            </div>
+            <div>
+                <p class="phone">{{ config.PHONE }}</p>
+                <p class="duty">ДЕЖУРНЫЙ ЮРИСТ</p>
+
+            </div>
+        </footer>
+{% endblock content %}

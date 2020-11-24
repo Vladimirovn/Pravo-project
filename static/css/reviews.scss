@@ -1,0 +1,118 @@
+@import "fonts";
+
+#reviews {
+  height: 760px;
+  background: #F4F4F4;
+  display: flex;
+  //align-items: center;
+  justify-items: start;
+  flex-direction: column;
+
+  .services_head {
+    margin-top: 61px;
+    margin-bottom: 64px;
+    margin-left: 25%;
+  }
+
+  #carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background: #FFFFFF;
+    height: 450px;
+    width: 750px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    align-items: center;
+    justify-content: center;
+    //justify-items: center;
+    flex-direction: column;
+    display: none;
+  }
+
+  .person_icon {
+    height: 99px;
+  }
+
+  .person_stars {
+    width: 98px;
+  }
+
+  .card_pic {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  //.first {
+  //  display: flex;
+  //}
+  //
+  //.second {
+  //  display: none;
+  //}
+  //
+  //.third {
+  //  display: none;
+  //}
+  //
+  //.forth {
+  //  display: none;
+  //}
+
+  //.body_card {
+  //  margin-top: 12px;
+  //  text-align: justify;
+  //  width: 70%;
+  //
+  //}
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6%;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background: #F1F1F1;
+
+  }
+
+  .back {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+
+  #item_indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+
+    .item {
+      margin: 18px;
+      background: #DFDFDF;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .first_item {
+      background-color: #359EFF;
+    }
+  }
+
+
+}
+
